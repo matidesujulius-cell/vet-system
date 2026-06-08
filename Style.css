@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #e9f5ef 0%, #d4e6df 100%);
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.94);
+  border-radius: 2rem;
+  box-shadow: 0 25px 45px -12px rgba(0,32,25,0.35);
+  overflow: hidden;
+}
+
+.vet-header {
+  background: #1e3f3a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 3px solid #f4b942;
+}
+.logo h1 { color: white; font-size: 1.7rem; }
+.logo p { color: #cfe6df; font-size: 0.8rem; }
+.logout-btn, .back-btn {
+  background: #d9534f;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.back-btn { background: #5a6268; }
+.logout-btn:hover, .back-btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+.main-dashboard {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.left-panel {
+  flex: 1.2;
+  min-width: 260px;
+}
+.right-panel {
+  flex: 1;
+  min-width: 280px;
+  background: #fefaf0;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.dr-center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.dr-large-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f4b942;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  margin-bottom: 0.8rem;
+}
+.dr-center h2 { color: #1e3f3a; margin-top: 0.5rem; }
+
+.services-menu {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 1rem;
+}
+.services-menu h3 {
+  color: #1e3f3a;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f4b942;
+  padding-left: 0.8rem;
+}
+.service-list {
+  list-style: none;
+}
+.service-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.omba-link {
+  display: inline-block;
+  background: #f4b942;
+  color: #1e3f3a;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+.omba-link:hover { background: #e0a82e; }
+
+.request-panel {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.service-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+.service-request-btn {
+  background: #e9f1ed;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  text-align: left;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.service-request-btn:hover { background: #d4e6df; transform: translateX(5px); }
+
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.form-group { margin-bottom: 1rem; }
+label { font-weight: 600; color: #2c5a52; display: block; margin-bottom: 0.3rem; }
+input, select, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  border: 1px solid #cbdcd6;
+}
+.btn-primary {
+  background: #1e3f3a;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+.btn-secondary { background: #6c757d; margin-top: 0.5rem; }
+.admin-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 0.5rem; }
+.edit-service, .delete-service { background: none; border: none; cursor: pointer; font-size: 1rem; }
+.edit-service { color: #f4b942; }
+.delete-service { color: #d9534f; }
+
+.service-admin-row, .request-admin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  border-bottom: 1px solid #eee;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+}
+.close-modal { float: right; font-size: 1.5rem; cursor: pointer; }
+.status-pending { background: #ffc107; color: #3e2a00; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.7rem; }
+.status-completed { background: #2e8b57; color: white; padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.7rem; }
+.text-center { text-align: center; }
+footer {
+  background: #e9f1ed;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.8rem;
+  color: #5a7c73;
+}
